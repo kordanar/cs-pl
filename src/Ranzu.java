@@ -44,7 +44,11 @@ public class Ranzu extends JFrame {
                 int y = e.getY()/Image_Size;
                 Coor coor = new Coor(x , y);
                 if (e.getButton()== MouseEvent.BUTTON1)
+                {
+                    return Game.Turn;
+                }
                 panel.repaint();
+
             }
         });
         panel.setPreferredSize(new Dimension(Ranges.getSize().x*Image_Size,Ranges.getSize().y*Image_Size));

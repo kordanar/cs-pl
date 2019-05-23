@@ -1,18 +1,29 @@
 package Packet;
 
 public class Game {
-    Board Payday;
+    private Blue blue;
     public Game(int cols, int rows){
         Ranges.setSize(new Coor(cols,rows));
+        blue= new BlueP()
     }
     public void start(){
-        Payday = new Board(Box.empty);
+        blue.start();
     }
 
     public Box getBox(Coor coor){
-        return Payday.get(coor);
+        return blue.get(coor);
 
     }
+    public void Turn(){
+        if (BlueCh == GreenCh){
+            placeBlue(Coor(x,y));
+        }
+        if ( BlueCh>GreenCh){
+            placeGreen(Coor(x,y));
+        }
+    }
+
+
 
 
 }
